@@ -1,8 +1,9 @@
 library(ggplot2)
-data= read.delim("dpyd_gnomad.tsv")
+dpyd <- read.table(file = "dpyd_gnomad.tsv",header = TRUE, sep = "\t",na.strings = "None")
 
-pl= ggplot(data, aes(y=AN, x=AC)) + geom_point()
+pl= ggplot(dpyd, aes(y=AN, x=AC)) + geom_point()
 
 print(pl)
+
 
       
